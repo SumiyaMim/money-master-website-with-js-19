@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Money Master</title>
+</head>
+<body>
+    <header class="mx-16 my-8">
+        <img src="./images/logo.png" alt="logo" class="w-64 mx-auto">
+    </header>
+    <main>
+        <!-- main container -->
+        <div class="mx-8 md:mx-16 mb-8 flex flex-col lg:flex-row gap-8">
+            <div class="flex-1">
+                <img src="./images/banner.png" alt="banner">
+            </div>
+            <div class="bg-[#F8F8F8] flex-1 px-4 py-8 text-center">
+                <h3 class="text-2xl text-zinc-700 font-bold mb-4">Income</h3>
+
+                <!-- income section -->
+                <div class="flex gap-4 justify-end items-center mx-auto w-10/12 md:w-6/12 mb-4">
+                    <h4 class="text-base text-zinc-700 font-medium text-right">Income: </h4>
+                    <input type="text" id="my-income" class="outline-none bg-[#DCDCDC] pl-4 py-1 text-base">   
+                </div>
+
+                <!-- expenses section -->
+                <h3 class="text-lg text-zinc-700 font-semibold mb-4">Expenses</h3>
+                <div class="flex gap-4 justify-end items-center mx-auto w-10/12 md:w-6/12 mb-4">
+                    <h4 class="text-base text-zinc-700 font-medium text-right">Food: </h4>
+                    <input type="text" id="food-expenses" class="outline-none bg-[#DCDCDC] pl-4 py-1 text-base">
+                </div>
+                <div class="flex gap-4 justify-end items-center mx-auto w-10/12 md:w-6/12 mb-4">
+                    <h4 class="text-base text-zinc-700 font-medium text-right">Rent: </h4>
+                    <input type="text" id="rent-expenses" class="outline-none bg-[#DCDCDC] pl-4 py-1 text-base">
+                </div>
+                <div class="flex gap-4 justify-end items-center mx-auto w-10/12 md:w-6/12 mb-6">
+                    <h4 class="text-base text-zinc-700 font-medium text-right">Clothes: </h4>
+                    <input type="text" id="clothes-expenses" class="outline-none bg-[#DCDCDC] pl-4 py-1 text-base">
+                </div>
+
+                <button onclick="calculateBtn()" class="bg-[#59A5FF] rounded-md px-10 py-1 mb-4 text-lg text-white font-semibold shadow- hover:bg-[#549af1]">Calculate</button>
+
+                <h3 class="text-lg text-zinc-700 font-semibold mb-2">Total Expenses: <span id="show-expenses">00</span></h3>
+                <h3 class="text-lg text-zinc-700 font-semibold mb-4">Balance: <span id="show-balance">00</span></h3>
+
+                <!-- save section -->
+                <div class="flex justify-evenly items-center w-11/12 md:w-7/12 lg:w-8/12 mx-auto mb-4">
+                    <h4 class="text-base text-zinc-700 font-medium">Save:</h4>
+                    <input type="text" id="save-percentage" class="outline-none bg-[#DCDCDC] pl-6 md:pl-12 py-1 text-base w-16 md:w-28">
+                    <h4 class="text-base text-zinc-700 font-medium">%</h4>
+                    <button onclick="saveBtn()" class="bg-[#59A5FF] rounded-sm px-8 md:px-10 py-0.5 text-lg text-white font-semibold shadow-md hover:bg-[#549af1]">Save</button>
+                </div>
+
+                <h3 class="text-lg text-zinc-700 font-semibold mb-2">Saving Amount: <span id="save-amount">00</span></h3>
+                <h3 class="text-lg text-zinc-700 font-semibold">Remaining Balance: <span id="remain-balance">00</span></h3>
+            </div>
+        </div>
+    </main>
+
+    <script src="./index.js"></script>
+</body>
+</html>
